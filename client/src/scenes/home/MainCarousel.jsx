@@ -4,6 +4,9 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import { useRef } from "react";
+import ShoppingList from "./ShoppingList";
+import Banner from "./Banner";
 
 
 // Imports all images from assets folder
@@ -21,7 +24,12 @@ const heroTextureImports = importAll(
 const MainCarousel = () => {
     const isNonMobile = useMediaQuery("(min-width:600px)");
 
+    //used for scrolling down to ShoppingList page upon button click
+    const ref = useRef(null);
+    const doClick = () => ref.current?.scrollIntoView({behavior: 'smooth'})
+
     return (
+      <>
         <Carousel
         infiniteLoop={true}
         showThumbs={false}
@@ -79,7 +87,7 @@ const MainCarousel = () => {
               padding="20px"
               borderRadius="1px"
               textAlign="left"
-              backgroundColor="rgb(0, 0, 0, 0.4)"
+              backgroundColor="rgb(0, 0, 0, 0.65)"
               position="absolute"
               top="46%"
               left={isNonMobile ? "10%" : "0"}
@@ -88,10 +96,11 @@ const MainCarousel = () => {
               maxWidth={isNonMobile ? undefined : "240px"}
             >
               <Typography >NEW ITEMS</Typography>
-              <Typography variant="h1">Summer Sale</Typography>
+              <Typography variant="h1">Riding Season Sale</Typography>
               <Typography
                 fontWeight="bold"
-                sx={{ textDecoration: "underline" }}
+                sx={{ textDecoration: "underline", cursor: "pointer" }} 
+                onClick={doClick}
               >
                 Discover More
               </Typography>
@@ -99,6 +108,13 @@ const MainCarousel = () => {
           </Box>
         ))}
       </Carousel>
+
+      <Banner />
+      <div ref={ref}>
+        <ShoppingList />
+      </div>
+
+      </>
     )
 }
 

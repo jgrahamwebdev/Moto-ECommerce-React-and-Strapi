@@ -5,7 +5,7 @@ import { PersonOutline, ShoppingBagOutlined, MenuOutlined, SearchOutlined } from
 import { useNavigate } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { setIsCartOpen } from "../../state";
+import { setIsCartOpen, setIsMenuOpen } from "../../state";
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ const Navbar = () => {
                         <ShoppingBagOutlined />
                     </IconButton>
                     </Badge>
-                    <IconButton sx={{color: "black"}}>
+                    <IconButton sx={{color: "black"}} onClick={() => dispatch(setIsMenuOpen({}))}>
                         <MenuOutlined />
                     </IconButton>
                 </Box>
