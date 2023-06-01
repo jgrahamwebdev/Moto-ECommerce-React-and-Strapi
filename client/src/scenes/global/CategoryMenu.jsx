@@ -25,16 +25,16 @@ const CategoryMenu = () => {
 
     return (
         // Smoke screen overlay
-        <Box display={isMenuOpen ? "block" : "none"} backgroundColor="rgba(0, 0, 0, 0.65)" position="fixed" zIndex={10} width="100%" height="100%" left="0" top="0" overflow="auto">
+        <Box display={isMenuOpen ? "block" : "none"} position="fixed" zIndex={10} width="100%" height="100%" left="0" top="0" overflow="auto">
 
             {/* Cart Menu popover */}
             {/* MODAL */}
-            <Box position="fixed" right="0" bottom="0" width="max(400px, 30%)" height="100%" backgroundColor="white">
+            <Box position="fixed" right="0" top="0" width="max(400px, 20%)" height="50%" backgroundColor="white" borderLeft="2px solid #000" borderBottom="2px solid #000">
                 <Box padding="30px" overflow="auto" height="100%">
 
                     {/*HEADER*/}
                     <FlexBox mb="15px">
-                        <Typography sx={{fontSize: "2rem"}} variant="h3">CATEGORIES:</Typography>
+                        <Typography sx={{fontSize: "2rem"}} variant="h3">Categories:</Typography>
                         <IconButton onClick={() => dispatch(setIsMenuOpen())}>
                             <CloseIcon />
                         </IconButton>
@@ -50,6 +50,14 @@ const CategoryMenu = () => {
                     <Box width="100%" height="2.5rem" display="flex" alignItems="center" paddingLeft="10px" marginBottom="1rem" borderRadius="5px" sx={{":hover": {
                 bgcolor: "#d8d8d8", cursor: "pointer", textDecoration: "underline"}}} onClick={() => {navigate(`/parts`); dispatch(setIsMenuOpen({})); }}>
                         <Typography>Parts</Typography>
+                    </Box>
+                    <Box width="100%" height="2.5rem" display="flex" alignItems="center" paddingLeft="10px" marginBottom="1rem" borderRadius="5px" sx={{":hover": {
+                bgcolor: "#d8d8d8", cursor: "pointer", textDecoration: "underline"}}} onClick={() => {navigate(`/`); dispatch(setIsMenuOpen({})); }}>
+                        <Typography>Track Order</Typography>
+                    </Box>
+                    <Box width="100%" height="2.5rem" display="flex" alignItems="center" paddingLeft="10px" marginBottom="1rem" borderRadius="5px" sx={{":hover": {
+                bgcolor: "#d8d8d8", cursor: "pointer", textDecoration: "underline"}}} onClick={() => {navigate(`/`); dispatch(setIsMenuOpen({})); }}>
+                        <Typography>Contact Us</Typography>
                     </Box>
                 </Box>
             </Box>

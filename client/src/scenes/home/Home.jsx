@@ -5,6 +5,7 @@ import Banner from "./Banner"
 import Subscribe from "./Subscribe"
 import Video from "./Video"
 import ImageBanners from "./ImageBanners"
+import BrandBanner from "./BrandBanner"
 
 
 
@@ -20,6 +21,7 @@ const Home = () => {
             <Subscribe />
             <ImageBanners />
             <Video />
+            <BrandBanner />
         </div>
     )
 }
