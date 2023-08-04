@@ -16,10 +16,11 @@ function Footer() {
         columnGap="clamp(20px, 30px, 40px)"
       >
         <Box width="clamp(20%, 30%, 40%)">
-            <Box marginBottom="1rem" sx={{height: 40, width: 200}}>
+            <Box marginBottom="1rem" sx={{height: 'auto', width: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'start'}}>
                 <img style={{width: 'auto', height: '4rem'}} src='./images/logo.png'/>
+                <img style={{height: '1rem', width: 'auto', marginLeft: '1rem'}} src='./images/logo-text.png'/>
             </Box>
-          <div style={{marginTop: '3rem'}}>
+          <div style={{marginTop: '2rem'}}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -55,7 +56,7 @@ function Footer() {
             1234 Somewhere Blvd, SomePlace, US 12345
           </Typography>
           <Typography mb="30px" sx={{ wordWrap: "break-word" }}>
-            Email: motoshop@email.com
+            Email: onestopmotorsport@email.com
           </Typography>
           <Typography mb="30px">(555)123-4567</Typography>
         </Box>

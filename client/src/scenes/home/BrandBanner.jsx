@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 const BrandBanner = () => {
     return (
         <div style={{ width: "100vw", height: "auto", display: "flex", alignItems: "center", justifyContent: "space-around", flexDirection: "column", marginTop: "6rem"}}>
-            <Typography variant="h3" style={{ marginLeft: "2rem" }}>We carry for <b>all</b> major brands</Typography>
+            <Typography variant="h3" style={{ marginLeft: "2rem" }}>We carry <b>all</b> major brands</Typography>
             <div style={{ width: "100%", height: "10rem", display: "flex", alignItems: "center", justifyContent: "space-around"}}>
             <img style={{ width: "auto", height: "55%"}} src="./images/honda.png" alt="" />
             <img style={{ width: "auto", height: "55%"}} src="./images/suzuki.png" alt="" />

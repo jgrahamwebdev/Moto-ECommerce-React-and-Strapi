@@ -17,8 +17,9 @@ const Navbar = () => {
             <Box width="80%" margin="auto" display="flex" justifyContent="space-between" alignItems="center">
 
                 <Box onClick={() => navigate("/")} sx={{height: 40,
-          width: 'auto','&:hover': {cursor: "pointer"}}}>
+          width: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', '&:hover': {cursor: "pointer"}}}>
                     <img style={{height: '2.6rem', width: 'auto'}} src='./images/logo.png'/>
+                    <img style={{height: '1rem', width: 'auto', marginLeft: '1rem'}} src='./images/logo-text.png'/>
                 </Box>
                 <Box display="flex" justifyContent="space-between" columnGap="20px" zIndex="2">
                     <IconButton sx={{color: "black"}}>
