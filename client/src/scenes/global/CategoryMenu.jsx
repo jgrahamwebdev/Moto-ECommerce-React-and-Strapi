@@ -25,11 +25,11 @@ const CategoryMenu = () => {
 
     return (
         // Smoke screen overlay
-        <Box display={isMenuOpen ? "block" : "none"} position="fixed" zIndex={10} width="100%" height="100%" left="0" top="0" overflow="auto">
+        <Box display={isMenuOpen ? "block" : "none"} position="fixed" zIndex={888} width="100vw" height="100vh" backgroundColor="rgba(0,0,0,0.8)" left="0" top="0" overflow="auto">
 
             {/* Cart Menu popover */}
             {/* MODAL */}
-            <Box position="fixed" right="0" top="0" width="max(400px, 20%)" height="50%" backgroundColor="white" borderLeft="2px solid #000" borderBottom="2px solid #000">
+            <Box position="fixed" right="0" top="0" width="max(400px, 20%)" height="100%" backgroundColor="white" borderLeft="2px solid #000" borderBottom="2px solid #000">
                 <Box padding="30px" overflow="auto" height="100%">
 
                     {/*HEADER*/}

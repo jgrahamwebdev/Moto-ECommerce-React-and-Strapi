@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Checkout from "./scenes/checkout/Checkout";
+import Confirmation from "./scenes/checkout/Confirmation";
 import Home from "./scenes/home/Home";
 import ItemDetails from "./scenes/itemDetails/ItemDetails";
 import Navbar from "./scenes/global/Navbar";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="item/:itemId" element={<ItemDetails />}/>
           <Route path="checkout" element={<Checkout />}/>
+          <Route path="checkout/success" element={<Confirmation />}/>
           <Route path="riding-gear" element={<RidingGear />}/>
           <Route path="accessories" element={<Accessories />}/>
           <Route path="parts" element={<Parts />}/>
