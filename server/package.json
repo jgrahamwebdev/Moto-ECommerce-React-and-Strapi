@@ -6,6 +6,8 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "strapi build",
     "strapi": "strapi"
   },
